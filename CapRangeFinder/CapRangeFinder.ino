@@ -30,7 +30,7 @@ void setup() {
  //this sets the push button to toggle between units
  //pinMode(13,INPUT_PULLUP); 
  //for leds
- pinMode(9,OUTPUT); //for buzzer
+ pinMode(6,OUTPUT); //for buzzer
 }
 void loop() {
 //the datasheet recommmended a minimum measurement cycle of 60ms  
@@ -55,7 +55,12 @@ distanceFT=distanceIN/12; //ft=in/12;  12 inches in a foot
      //lcd.setCursor(3,1);      //to the target in inches
      lcd.print(distanceIN);
      
-if (distanceIN'<5);
-  pinMode(9,HIGH);
-
+if (distanceIN <=5)
+  {
+    digitalWrite(6,HIGH);
+  }
+  else 
+  {
+    digitalWrite(6,LOW);
+  }
 }
